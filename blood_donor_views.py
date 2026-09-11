@@ -44,9 +44,11 @@ class BloodDonorManager:
             query="select * from donor"
             self.cursor.execute(query)
             records=self.cursor.fetchall()
-            # print(records)
-            for data in records:
-                print(data)
+            # # print(records)
+            # for data in records:
+            #     print(data)
+            return records
+
         except Exception as e:
             print(e)
     def retrieve(self,id=None):
